@@ -7,17 +7,28 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {HashRouter, Switch, Route, withRouter} from  'react-router-dom';
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
 
 // start the Stimulus application
 import './bootstrap';
+import Navbar from "./js/components/navbar";
+import HomePage from "./js/pages/homePage";
 
-console.log("hello world");
 
+const NavbarWithRouter = withRouter(Navbar);
 const App = () => {
-    return <h1>Hello world !</h1>;
+    return (
+        <HashRouter>
+            <NavbarWithRouter />
+            <Switch>
+
+                <Route path="/" component={HomePage} />
+            </Switch>
+        </HashRouter>
+    );
 };
 
 const rootElement = document.querySelector('#app');
