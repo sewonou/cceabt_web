@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Hide mobile nav on same-page/hash links
    */
-  document.querySelectorAll('#navbar a').forEach(navbarlink => {
+  /*document.querySelectorAll('#navbar a').forEach(navbarlink => {
 
     if (!navbarlink.hash) return;
 
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-  });
+  });*/
 
   /**
    * Toggle mobile nav dropdowns

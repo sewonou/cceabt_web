@@ -1,21 +1,21 @@
 import React from 'react';
-import Hero from "../components/hero";
-import Missions from "../components/missions";
-import About from "../components/about";
-import Partner from "../components/partner";
-import Goals from "../components/goals";
-import Footer from "../components/footer";
-import Faq from "../components/faq";
-import Testimonials from "../components/testimonials";
-import RecentPosts from "../components/recentPosts";
-import Action from "../components/action";
+import Hero from "../components/frontend/hero";
+import Missions from "../components/frontend/missions";
+import About from "../components/frontend/about";
+import Partner from "../components/frontend/partner";
+import Goals from "../components/frontend/goals";
+import Footer from "../components/frontend/footer";
+import Faq from "../components/frontend/faq";
+import Testimonials from "../components/frontend/testimonials";
+import RecentPosts from "../components/frontend/recentPosts";
+import Action from "../components/frontend/action";
 
 
 const HomePage = (props) => {
     return (
         <>
         <Hero />
-        <main >
+        <main id="main">
             <Partner/>
             <Goals/>
             <About />
