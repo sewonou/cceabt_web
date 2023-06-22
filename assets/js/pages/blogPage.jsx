@@ -2,6 +2,8 @@ import React from 'react';
 import Hero from "../components/frontend/hero";
 import Header from "../components/frontend/header";
 import PostItem from "../components/frontend/postItem";
+import BlogLeftAside from "../components/frontend/blogLeftAside";
+import BlogRightAside from "../components/frontend/blogRightAside";
 
 const BlogPage = (props) => {
     return (
@@ -10,24 +12,12 @@ const BlogPage = (props) => {
                 pageTitle="A propos de nous Nous"
                 description="Nous sommes ravis de vous entendre ! Si vous avez des questions, des commentaires ou des suggestions, n'hésitez pas à nous contacter !"
             />
-            <section id="recent-posts" className="recent-posts">
+            <section id="blog" className="blog">
                 <div className="container" data-aos="fade-up">
 
-                    <div className="section-header">
-                        <h2>Notre Actualités</h2>
-
-                    </div>
-
-                    <div className="row gy-5">
-                        <PostItem/>
-                        <PostItem/>
-                        <PostItem/>
-                        <PostItem/>
-                        <PostItem/>
-                        <PostItem/>
-                        <PostItem/>
-                        <PostItem/>
-                        <PostItem/>
+                    <div className="row g-5">
+                        <BlogLeftAside/>
+                        <BlogRightAside/>
                     </div>
                 </div>
             </section>

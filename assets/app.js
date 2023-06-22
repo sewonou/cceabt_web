@@ -18,11 +18,12 @@ import Navbar from "./js/components/frontend/navbar";
 import HomePage from "./js/pages/homePage";
 import AboutPage from "./js/pages/aboutPage";
 import BlogPage from "./js/pages/blogPage";
+import BlogSinglePage from "./js/pages/blogSinglePage";
 import ResourcesPage from "./js/pages/resourcesPage";
 import ContactPage from "./js/pages/contactPage";
 import ContactsPage from "./js/pages/contactsPage";
 import DonatePage from "./js/pages/donatePage";
-
+import LoginPage from "./js/pages/dashboard/loginPage";
 
 
 const App = () => {
@@ -31,6 +32,8 @@ const App = () => {
         <Navbar />
         <main>
             <Switch>
+                <Route path="/login" component={LoginPage} />
+                <Route path="/actualities/details" component={BlogSinglePage} />
                 <Route path="/contact" component={ContactPage} />
                 <Route path="/donate" component={DonatePage} />
                 <Route path="/resources" component={ResourcesPage} />
