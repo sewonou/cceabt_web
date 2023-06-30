@@ -14,7 +14,9 @@ import './styles/app.css';
 
 // start the Stimulus application
 import './bootstrap';
+import AuthAPI from "./js/services/authAPI";
 import Navbar from "./js/components/frontend/navbar";
+import DashboardNavbar from "./js/components/dashboard/dashboardNavbar";
 import HomePage from "./js/pages/homePage";
 import AboutPage from "./js/pages/aboutPage";
 import BlogPage from "./js/pages/blogPage";
@@ -24,12 +26,14 @@ import ContactPage from "./js/pages/contactPage";
 import ContactsPage from "./js/pages/contactsPage";
 import DonatePage from "./js/pages/donatePage";
 import LoginPage from "./js/pages/dashboard/loginPage";
+import authAPI from "./js/services/authAPI";
 
 
 const App = () => {
+    const path = AuthAPI.getPath();
     return (
         <HashRouter>
-        <Navbar />
+        {path === '/admin/' ? <DashboardNavbar /> : <Navbar />}
         <main>
             <Switch>
                 <Route path="/login" component={LoginPage} />
@@ -46,6 +50,6 @@ const App = () => {
         </HashRouter>
     )
 };
-
+console.log(AuthAPI.getPath());
 const rootElement = document.querySelector('#app');
 ReactDOM.render(<App />, rootElement);

@@ -16,7 +16,7 @@ class AppController extends AbstractController
         ]);
     }
 
-    #[Route('/admin', name: 'app_admin')]
+    #[Route('/admin/', name: 'app_admin')]
     public function admin(): Response
     {
         return $this->render('app/admin.html.twig', [
